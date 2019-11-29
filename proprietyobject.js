@@ -2,19 +2,17 @@
 	 var elements = [];
 	 var template = "Hello";
 
-	    obj = {
-	    john: 12,
-	    brian: true,
-	    doe: 'hi',
-	    fred: false
-	 };
+	 if(typeof obj == "object" && Object.keys(obj).length > 0){
+   		
 	 
-	for (const [key, value] of Object.entries(obj)) {
-	   
-	     elements.push(template+"-"+key);
+		for (const [key, value] of Object.entries(obj)) {
+		   
+		     elements.push(template+"-"+key);
+		}
+
 	}
 
 	return elements;
 
-
 }
+
